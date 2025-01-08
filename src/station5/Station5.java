@@ -1,7 +1,11 @@
 public class Station5 {
     public static void main(String[] args) {
         // ここから
-        process();
+        try{
+            process();
+        }catch(RuntimeException ignore){
+            System.out.println("エラーが発生しました");
+        }
         // ここまで
         System.out.println("処理が完了しました");
     }
