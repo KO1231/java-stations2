@@ -1,16 +1,16 @@
 public class Item {
-    private int id;
-    private String name;
-    private int stock;
+    private final int id;
+    private final String name;
+    private final int stock;
 
-    public Item(int id, String name, int stock) {
+    public Item(final int id, final String name, final int stock) {
         this.id = id;
         this.name = name;
         this.stock = stock;
     }
 
-    String getDisplayText() {
-        String stockInfo = stock > 0 ? "In stock" : "Out of stock";
+    final String getDisplayText() {
+        final String stockInfo = stock > 0 ? "In stock" : "Out of stock";
         return name + " (" + stockInfo + ")";
     }
 }
